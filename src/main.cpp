@@ -42,6 +42,12 @@ void setup() {
 
 void loop() {
   // Test: chạy tới 2 giây, dừng 2 giây
+
+  //Test hàm mới ở đây
+  testNewFeature();  // Thêm dòng này
+  delay(1000);
+  //Kết thúc test hàm mới
+
   moveForward(200);
   delay(2000);
   stopMotor();
@@ -69,4 +75,10 @@ void stopMotor() {
   setWheel(RL_IN3, RL_IN4, RL_ENB, 0, true);
   setWheel(RR_IN3, RR_IN4, RR_ENB, 0, true);
   Serial.println("DUNG");
+}
+
+// Minh test hàm mới 
+void testNewFeature() {
+    Serial.println("Testing new feature from develop branch!");
+    delay(1000);
 }
