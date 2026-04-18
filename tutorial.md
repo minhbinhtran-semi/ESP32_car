@@ -138,7 +138,8 @@ text
 ```bash
 git checkout main
 git pull origin main
-5.2. TẠO NHÁNH RIÊNG (MỖI TÍNH NĂNG 1 NHÁNH)
+
+### 5.2. TẠO NHÁNH RIÊNG (MỖI TÍNH NĂNG 1 NHÁNH)
 bash
 git checkout -b feature/ten_tinh_nang
 Ví dụ tên nhánh:
@@ -153,7 +154,7 @@ feature/espnow (cho ESP-NOW)
 
 fix/ten_loi (sửa lỗi)
 
-5.3. CODE VÀ COMMIT
+### 5.3. CODE VÀ COMMIT
 Sửa code trong file src/main.cpp
 
 Lưu file (Ctrl + S)
@@ -178,10 +179,12 @@ text
 ✅ "update: tăng tốc độ gửi dữ liệu lên 50Hz"
 ❌ "sua code"
 ❌ "fix"
-5.4. PUSH LÊN GITHUB
+
+### 5.4. PUSH LÊN GITHUB
 bash
 git push -u origin feature/ten_tinh_nang
-5.5. TẠO PULL REQUEST (YÊU CẦU DUYỆT CODE)
+
+### 5.5. TẠO PULL REQUEST (YÊU CẦU DUYỆT CODE)
 Mở trình duyệt vào repo GitHub
 
 Click tab "Pull requests"
@@ -199,20 +202,21 @@ Click "Create pull request"
 Điền mô tả:
 
 text
-## Thay đổi
+#### Thay đổi
 - Thêm chức năng đọc MPU6050
 - Gửi dữ liệu qua BLE
 
-## Kiểm tra
+#### Kiểm tra
 - [ ] Code chạy ổn định
 Click "Create pull request"
 
-5.6. SAU KHI ĐƯỢC DUYỆT (TRƯỞNG NHÓM MERGE XONG)
+### 5.6. SAU KHI ĐƯỢC DUYỆT (TRƯỞNG NHÓM MERGE XONG)
 bash
 git checkout main
 git pull origin main
 git branch -d feature/ten_tinh_nang
-6. CÁC LỆNH GIT CƠ BẢN (TỔNG HỢP)
+
+## 6. CÁC LỆNH GIT CƠ BẢN (TỔNG HỢP)
 Lệnh	Ý nghĩa	Khi nào dùng
 git clone <url>	Tải dự án về máy	Lần đầu lấy code
 git checkout main	Chuyển sang nhánh main	Trước khi tạo nhánh mới
@@ -223,7 +227,8 @@ git add .	Thêm tất cả file	Trước khi commit
 git commit -m "..."	Lưu lại thay đổi	Sau khi add
 git push -u origin <tên>	Đẩy lên GitHub	Sau khi commit
 git branch	Xem danh sách nhánh	Kiểm tra đang ở nhánh nào
-7. XỬ LÝ LỖI THƯỜNG GẶP
+
+## 7. XỬ LÝ LỖI THƯỜNG GẶP
 LỖI 1: "fatal: not a git repository"
 Nguyên nhân: Đang ở sai thư mục
 
@@ -261,22 +266,23 @@ bash
 git add .
 git commit -m "resolve conflict"
 git push
-TÓM TẮT QUY TRÌNH (CHO MỖI LẦN LÀM VIỆC)
+
+# TÓM TẮT QUY TRÌNH (CHO MỖI LẦN LÀM VIỆC)
 bash
-# 1. Lấy code mới nhất
+## 1. Lấy code mới nhất
 git checkout main
 git pull origin main
 
-# 2. Tạo nhánh mới
+## 2. Tạo nhánh mới
 git checkout -b feature/ten_tinh_nang
 
-# 3. Code, sửa file...
+## 3. Code, sửa file...
 
-# 4. Lưu và commit
+## 4. Lưu và commit
 git add .
 git commit -m "mô tả thay đổi"
 
-# 5. Push lên GitHub
+## 5. Push lên GitHub
 git push -u origin feature/ten_tinh_nang
 
-# 6. Lên GitHub tạo Pull Request
+## 6. Lên GitHub tạo Pull Request
