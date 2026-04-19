@@ -96,6 +96,29 @@ Sau khi có tài khoản, **gửi username GitHub của bạn** cho trưởng nh
 
 ---
 
+### 3.3 Git cho folder
+
+Sau khi tạo ra folder rồi thì cần phải tạo git cho folder đó
+```bash
+# Push Xe_ESP32
+cd D:\PlatformIO_Projects\Xe_ESP32
+git init
+git remote add origin https://github.com/minhbinhtran-semi/Xe_ESP32.git
+git add .
+git commit -m "Initial commit: ESP32 car receiver"
+git branch -M main
+git push -u origin main
+
+# Push TayCam_ESP32C3
+cd ..\TayCam_ESP32C3
+git init
+git remote add origin https://github.com/minhbinhtran-semi/TayCam_ESP32C3.git
+git add .
+git commit -m "Initial commit: ESP32-C3 controller with MPU6050"
+git branch -M main
+git push -u origin main
+```
+
 ## 4. CẤU HÌNH VS CODE CHO ESP32
 
 ### 4.1. Cắm ESP32 vào máy tính
